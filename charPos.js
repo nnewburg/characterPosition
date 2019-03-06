@@ -9,9 +9,10 @@ function countLetters(str){
   for(let i = 0; i < str.length; i++){
 
     if(!output.hasOwnProperty(str[i])){
-        output[str[i]] = 1;
+        output[str[i]] = [];
+        output[str[i]].push(i)
     } else{
-      output[str[i]] = output[str[i]] + 1;
+      output[str[i]].push(i);
     }
   }
 
